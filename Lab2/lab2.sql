@@ -289,4 +289,4 @@ SELECT CONCAT(
 	COALESCE(first_name, ''), ' ',
 	COALESCE(middle_name, ''), ' ',
 	COALESCE(last_name, '')
-) AS 'Name' FROM Employees INNER JOIN Mobile ON Employees.emp_id 
+) AS 'Name' FROM Employees INNER JOIN Mobile ON Employees.emp_id = Mobile.emp_id WHERE COUNT(*) > 2;
